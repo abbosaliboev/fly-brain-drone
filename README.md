@@ -56,6 +56,11 @@ The drone never receives the apple's coordinates. It only gets what its own
 simulated eye sees. Whatever steering happens has to come out of the neural
 pipeline.
 
+**New here and the MaleCNS/FlyVis split, or the color-based food detection,
+seems confusing?** Read [`docs/faq.md`](docs/faq.md) first — a short,
+diagram-illustrated plain-language walkthrough of what each piece is and why
+it's there.
+
 ## Status: this is **not finished**
 
 We are building this in the open, incrementally, and we are not going to
