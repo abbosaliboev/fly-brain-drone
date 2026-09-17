@@ -14,9 +14,13 @@
 *A real neuroscience dataset. A real physics engine. A real, honestly-reported
 mess of a research project — in public, as it happens.*
 
-![The drone (a stylized fly) searching a lab arena for an apple, avoiding a green distractor and physical obstacles](experiments/results/dashboard_lab_preview.png)
+![The full live dashboard: 3D lab arena, the drone's own compound-eye camera view, the 141,781-neuron MaleCNS brain glowing with real activity, the 91-column hexagonal retina, and live neural telemetry, all in one window](docs/images/dashboard_full_view.png)
 
-*This is an actual screenshot from the live dashboard — not a mockup.*
+*An actual screenshot of the live dashboard — not a mockup. Left: the arena
+from outside. Center: what the drone itself sees. Top right: 47,261 real
+MaleCNS neuron positions with 27,523 visual-type neurons glowing by live
+activity. Bottom right: the hexagonal compound-eye input and motor/telemetry
+readout.*
 
 </div>
 
