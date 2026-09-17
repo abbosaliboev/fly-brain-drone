@@ -61,6 +61,11 @@ seems confusing?** Read [`docs/faq.md`](docs/faq.md) first — a short,
 diagram-illustrated plain-language walkthrough of what each piece is and why
 it's there.
 
+![Live recording of the dashboard: the drone searching the arena, its own compound-eye camera feed, the real MaleCNS brain glowing with live FlyVis activity, the hexagonal retina, and telemetry, all updating in real time](docs/images/dashboard_demo.gif)
+
+*This is a real, unedited recording of the closed loop running — not a
+mockup.*
+
 ## Status: this is **not finished**
 
 We are building this in the open, incrementally, and we are not going to
@@ -105,11 +110,10 @@ else in the repo.
   page-file/virtual-memory pressure has bitten us more than once — see
   [`PROJECT_STATUS.md`](PROJECT_STATUS.md)).
 
-If you were hoping for a slick "it just works" demo video: not yet. If you're
-interested in a transparent log of what happens when you actually try to wire
-a real connectome into a real control loop — including the parts that broke,
-why they broke, and what we learned from that — that's exactly what this repo
-is.
+If you're interested in a transparent log of what happens when you actually
+try to wire a real connectome into a real control loop — including the parts
+that broke, why they broke, and what we learned from that — that's exactly
+what this repo is.
 
 ## Why bother — isn't this already done?
 
