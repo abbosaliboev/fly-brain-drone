@@ -45,6 +45,17 @@ moment. FlyVis is like an engineer who took a similar (not identical)
 wiring diagram and tuned a working model against a real electricity meter,
 so it correctly predicts real current flow.
 
+### This is not a mockup — this is the actual model, live
+
+![Real MaleCNS neuron positions (47,261 context points, 27,523 of them the visual-type neurons this project actually simulates), rendered as a 3D point cloud and rotatable in the dashboard. The orange/yellow glow is FlyVis's live activity mapped onto the matching MaleCNS cell types.](images/malecns_flyvis_brain_view.png)
+
+*Every dot above is a real neuron soma position from the MaleCNS v1.0
+dataset — nothing here is illustrative or invented. The glow color shows
+live activity while the closed loop is running, taken directly from the
+dashboard (see [`src/visualization/flyvis_dashboard.py`](../src/visualization/flyvis_dashboard.py)).
+Run `.\.flyvis-venv\Scripts\python.exe -m src.cli dashboard` to see it
+rotate live on your own machine.*
+
 ### What we actually did with each one
 
 ```mermaid
@@ -80,6 +91,12 @@ Two real reasons, not just a shortcut:
 **What this means honestly:** the drone currently recognizes "a
 warm-colored blob," not "an apple" specifically. A same-colored distractor
 sphere can fool it. This is stated plainly, not hidden.
+
+![The drone's actual 91-column hexagonal compound eye, live — brightness is luminance, and the yellow/green tinted columns are the real R7-blue and R8-green proxy channels reacting to the orange apple in view.](images/retinal_input_view.png)
+
+*This is the real per-frame retinal input the color-opponent circuit reads
+— not a mockup. The warm (yellowish) columns on the left are where the
+apple currently sits in the drone's field of view.*
 
 ## 4. Could raw MaleCNS ever produce direction selectivity, without FlyVis?
 
