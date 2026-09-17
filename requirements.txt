@@ -1,0 +1,44 @@
+# Python 3.11. Install torch first with the CUDA index for this machine:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+# then:
+#   pip install -r requirements.txt
+#
+# Note: if pip hangs retrying a host called pypi.ngc.nvidia.com, this
+# machine has a stale global pip.ini (from an older NVIDIA PyIndex install)
+# pointing at a dead extra-index-url. Work around per-install with:
+#   $env:PIP_CONFIG_FILE = "NUL"   (PowerShell)
+# rather than editing the shared user pip.ini, since other projects may rely on it.
+#
+# IMPORTANT: never pass --extra-index-url alongside --index-url for torch —
+# pip will pick the highest-versioned match across BOTH indexes, which can
+# silently select the CPU-only build from public PyPI instead of the CUDA
+# build. Verify after install: `python -c "import torch; print(torch.__version__)"`
+# must show a "+cu124" (or similar) suffix, not a bare version number.
+
+numpy
+scipy
+pandas
+pyarrow
+
+# connectome access
+neuprint-python
+
+# GPU-accelerated 3D visualization
+vispy
+PyOpenGL
+PyQt5
+pyqtgraph
+
+# drone physics + rendering (Phase 4+). Originally planned to use pybullet
+# (see docs/architecture.md's Phase 0 reasoning), but pybullet has no
+# prebuilt wheel for this Python/OS combination and its from-source build
+# failed even with MSVC Build Tools + cmake installed (distutils compiler-
+# spawn error, not resolved after two workaround attempts). Switched to
+# MuJoCo, which ships an official prebuilt wheel (no compiler needed) and is
+# what most of the prior-art projects we surveyed already use (garyb9/fly-drone,
+# FLYNN, flybody, FlyGym) -- see docs/architecture.md for the updated decision.
+mujoco
+
+# utilities
+tqdm
+matplotlib

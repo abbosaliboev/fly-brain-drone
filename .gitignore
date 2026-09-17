@@ -1,0 +1,17 @@
+.venv/
+.pip-tmp/
+.flyvis-venv/
+.smoke-flyvis-venv*/
+.env
+.claude/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+*.egg-info/
+.ipynb_checkpoints/
+MUJOCO_LOG.TXT
+
+# experiments/results/ CSVs and PNGs are intentionally tracked -- they are
+# small, real evidence of what the benchmarks actually produced, not
+# regenerated build artifacts to hide.

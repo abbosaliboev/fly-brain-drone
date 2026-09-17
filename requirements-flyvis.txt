@@ -1,0 +1,7 @@
+# Optional environment for the successful pretrained FlyVis experiments.
+# Install with the project requirements in a dedicated Python 3.11 venv,
+# then run scripts/patch_flyvis_windows.py on Windows.
+-r requirements.txt
+
+flyvis==1.2.0
+datamate==1.0.0
